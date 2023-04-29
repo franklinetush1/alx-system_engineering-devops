@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-#Bash script that displays messages when read some signals
+# Does the following:
+#   Create a file /var/run/holbertonscript.pid containing the script PID.
+#   Displays "To infinity and beyond" indefinitely
+#   Displays "I hate the kill command" upon receiving a SIGTERM
+#   Displays "Y U no love me?!" upon receiving a SIGINT
+#   Deletes the file /var/run/holbertonscript.pid and terminates upon
+#+  receiving a SIGQUIT or SIGTERM
+
 echo $$ > /var/run/myscript.pid
 trap 'echo "I hate the kill command"; rm -rf /var/run/myscript.pid; exit' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
