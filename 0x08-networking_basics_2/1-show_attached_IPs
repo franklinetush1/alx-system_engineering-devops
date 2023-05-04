@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#show ipv4 networks
+
+ifconfig | awk '/^lo/ {next} /inet / {print $2}'
