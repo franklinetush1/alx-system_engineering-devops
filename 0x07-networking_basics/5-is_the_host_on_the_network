@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Pings an IP address 5 times
+
 if [ -z "$1" ]
 then
   echo "5-is_the_host_on_the_network {IP_ADDRESS}"
