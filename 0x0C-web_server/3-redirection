@@ -4,6 +4,6 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo sh -c 'echo "Hello World!" > /var/www/html/index.html'
-red_config="\\tlocation = /redirect_me {\n\\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\\t}"
+red_config="\\tlocation = /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
 sudo sed -i "/^server {/a $red_config" /etc/nginx/sites-available/default
 sudo service nginx start
