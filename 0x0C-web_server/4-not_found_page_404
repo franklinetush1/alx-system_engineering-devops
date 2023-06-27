@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Script that installs Nginx server,and customizes 404 not found
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo sh -c 'echo "<html>
+<head>
+<title>404 Not Found</title>
+</head>
+<body>
+<h1>404 Not Found</h1>
+<p>Ceci n&apos;est pas une page</p>
+</body>
+</html>" > /usr/share/nginx/html/err404.html'
+
+sudo sed -i 's|#error_page 404 /err404.html;|error_page 404 /err404.html;|' /etc/nginx/sites-available/default
+
+sudo service nginx restart
