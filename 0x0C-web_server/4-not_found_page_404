@@ -13,7 +13,5 @@ sudo sh -c 'echo "<html>
 <p>Ceci n&apos;est pas une page</p>
 </body>
 </html>" > /usr/share/nginx/html/err404.html'
-
 sudo sed -i 's|#error_page 404 /err404.html;|error_page 404 /err404.html;|' /etc/nginx/sites-available/default
-
 sudo service nginx restart
