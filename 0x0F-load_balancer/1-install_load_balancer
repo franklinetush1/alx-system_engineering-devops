@@ -17,5 +17,5 @@ backend http_back
   server 204106-web-01 54.236.50.142:80 check
   server 204106-web-02 52.87.231.81:80 check
 EOF
-sudo service haproxy restart
 sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+sudo service haproxy restart
