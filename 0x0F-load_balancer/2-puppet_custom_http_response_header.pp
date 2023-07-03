@@ -1,4 +1,4 @@
-class nginx {
+
   exec {'update':
   provider => shell,
   command  => 'sudo apt-get -y update',
@@ -23,6 +23,3 @@ class nginx {
     enable    => true,
     subscribe => File['/etc/nginx/conf.d/custom_response_header.conf'],
   }
-}
-
-include nginx_custom_header
