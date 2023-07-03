@@ -1,4 +1,3 @@
-
   exec {'update':
   provider => shell,
   command  => 'sudo apt-get -y update',
