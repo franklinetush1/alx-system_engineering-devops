@@ -2,4 +2,4 @@
 #Debug for nginx to listen to port 80
 sudo apt update
 sudo apt install nginx
-sudo systemctl start nginx
+sudo service start nginx
