@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #Debug for nginx to listen to port 80
 sudo apt update
 sudo apt install nginx
