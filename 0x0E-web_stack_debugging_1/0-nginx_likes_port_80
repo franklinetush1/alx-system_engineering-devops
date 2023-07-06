@@ -2,4 +2,5 @@
 #Debug for nginx to listen to port 80
 sudo apt update
 sudo apt install nginx
+sudo sed -i 's/^\(\s*\)listen\s\+.\+/    \1listen 80;/' /etc/nginx/nginx.conf
 sudo service start nginx
