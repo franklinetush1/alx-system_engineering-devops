@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Script that configures nginx
 sed -i 's/listen\s*\(.*\)/listen 80;/' /etc/nginx/nginx.conf
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
+kill "$(pgrep 'nginx' | head -1)"
