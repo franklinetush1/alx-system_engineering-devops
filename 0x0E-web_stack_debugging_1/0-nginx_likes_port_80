@@ -2,6 +2,5 @@
 #Debug for nginx to listen to port 80
 sudo apt update
 sudo apt install nginx
-sudo sed -i 's/listen\s*\(.*\)/listen 80;/' /etc/nginx/nginx.conf
-sed -i "s/listen \[::\]:8080 default_server ipv6only=on;/listen \[::\]:80 default_server;/" /etc/nginx/sites-enabled/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service start nginx
