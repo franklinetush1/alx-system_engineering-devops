@@ -3,4 +3,5 @@
 sudo apt update
 apt-get install -y nginx
 sed -i 's/listen\s*\(.*\)/listen 80;/' /etc/nginx/nginx.conf
+sed -i "s/ ipv6only=on//" /etc/nginx/sites-available/default
 sudo service nginx restart
