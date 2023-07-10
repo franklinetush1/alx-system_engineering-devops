@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Script that configures nginx
-apt-get install -y nginx
 sed -i 's/listen\s*\(.*\)/listen 80;/' /etc/nginx/nginx.conf
 sudo service nginx restart
+kill "$(pgrep 'nginx' | head -1)"
