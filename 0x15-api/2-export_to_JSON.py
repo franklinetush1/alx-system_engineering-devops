@@ -1,6 +1,7 @@
+#!/usr/bin/python3
+import json
 import requests
 import sys
-import json
 
 
 def export_tasks_to_json(tasks, user_id, username):
