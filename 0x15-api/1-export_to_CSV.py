@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Exports to-do list information in CSV format."""
 import csv
 import requests
 import sys
