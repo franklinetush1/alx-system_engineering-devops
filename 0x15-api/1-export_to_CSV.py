@@ -17,5 +17,5 @@ if __name__ == "__main__":
         for task in task_list:
             if task['userId'] == int(user_id):
                 completed_status = "True" if task['completed'] else "False"
-                writer.writerow([user_id, user_name, completed_status, 
+                writer.writerow([user_id, user_name, completed_status,
                                 task['title']])
