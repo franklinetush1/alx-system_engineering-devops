@@ -8,8 +8,6 @@ if __name__ == "__main__":
     idval = int(sys.argv[1])
     user = requests.get(url + 'users/{}'.format(idval)).json()
     task_list = requests.get(url + 'todos').json()
-
-    print(user.get('name'))
     totaltask = 0
     completed = []
     for i in range(len(task_list)):
