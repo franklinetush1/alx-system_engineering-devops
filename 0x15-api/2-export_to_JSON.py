@@ -10,7 +10,7 @@ def export_tasks_to_json(tasks, user_id, username):
         str(user_id): [
             {
                 "task": task["title"],
-                "completed": "True" if task["completed"] else "False",
+                "completed": task["completed"],
                 "username": username
             }
             for task in tasks
