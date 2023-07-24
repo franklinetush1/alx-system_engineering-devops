@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Returns to-do list information"""
 import requests
 import sys
 
