@@ -1,15 +1,6 @@
-# File: apache_php_fix.pp
-class apache_php_fix {
-    package { 'php5':
-        ensure => 'latest',
-    }
-
-    service { 'apache2':
-        ensure => 'running',
-        enable => true,
-        require => Package['php5'],
-    }
+ # Ensure that the php package is installed first
+file { '/var/www/html/wp-settings.php':
+  ensure  => 'present',
+  content => file('/var/www/html/wp-settings.php').content.gsub('phpp', 'php'),
+  require => Package['php'],
 }
-
-include apache_php_fix
-
