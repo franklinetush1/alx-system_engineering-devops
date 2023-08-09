@@ -1,11 +1,14 @@
 # Ensure proper wording
 package { 'apache2':
-  ensure => 'installed',
+  ensure => installed,
 }
+
 package { 'php':
-  ensure => 'installed',
+  ensure => installed,
 }
+
 exec { 'fixspell':
   command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-  path    => '/usr/local/bin/:/bin/'
+  path    => '/usr/local/bin/:/bin/',
+  require => [Package['apache2'], Package['php']],
 }
